@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --brightRed: #ff0000;
+  --mainRed: #f45a3b;
+  --lighterGrey: #d8d8d8;
+  --lightGrey: #999999;
+  --middleGrey: #666666;
+  --darkGrey: #222222;
+  --black: #000000;
+}
+
+.container {
+  width: 1000px;
+  height: 1000px;
+  padding: 65px 255px;
+}
+
+.rover {
+  position: relative;
+  margin: auto;
+}
+
+.rover__flag {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.rover__flag::after {
+  content: '';
+  position: absolute;
+  left: 45px;
+  bottom: -45px;
+  border: 20px solid transparent;
+  border-right: 65px solid var(--brightRed);
+}
+
+.rover__stick {
+  width: 5px;
+  height: 320px;
+  position: relative;
+  left: 125px;
+  background-color: var(--lightGrey);
+  z-index: 5;
+}
+
+.rover__flagBase-upper {
+  width: 55px;
+  height: 40px;
+  position: relative;
+  left: 100px;
+  background-color: var(--middleGrey);
+  border-top: 8px solid var(--black);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rover__flagBase-lower {
+  width: 75px;
+  height: 55px;
+  position: relative;
+  left: 85px;
+  background-color: var(--black);
+}
+
+.rover__flagBase-lower::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  border: 20px solid transparent;
+  border-bottom: 55px solid var(--black);
+}
+
+.rover__deck {
+  width: 530px;
+  position: relative;
+  left: -5px;
+  display: flex;
+  z-index: 5;
+}
+
+.rover__deck-left {
+  width: 55px;
+  height: 50px;
+  position: relative;
+  left: 1px;
+  background-color: var(--lighterGrey);
+  border-top-left-radius: 100%;
+}
+
+.rover__deck-center {
+  width: 225px;
+  height: 50px;
+  background-color: var(--lighterGrey);
+}
+
+.rover__deck-right {
+  width: 249px;
+  height: 50px;
+  background-color: var(--lighterGrey);
+  border-top-right-radius: 98%;
+}
+
+.rover__deckBorder {
+  width: 540px;
+  height: 15px;
+  position: relative;
+  left: -10px;
+  background-color: var(--brightRed);
+  border-radius: 50px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.rover__body {
+  width: 520px;
+  height: 130px;
+  background-color: var(--mainRed);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.rover__wheelMount {
+  position: relative;
+}
+
+.rover__wheelMount-top {
+  width: 490px;
+  height: 45px;
+  position: absolute;
+  top: -41px;
+  left: 16px;
+  border-bottom: 50px solid var(--darkGrey);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  z-index: -5;
+}
+
+.rover__wheelMount-center-top {
+  width: 490px;
+  height: 30px;
+  position: relative;
+  top: 9px;
+  left: 16px;
+  background-color: var(--darkGrey);
+}
+
+.rover__wheelMount-center-bottom {
+  width: 490px;
+  height: 0;
+  position: relative;
+  top: 9px;
+  left: 16px;
+  border-top: 50px solid var(--darkGrey);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.rover__wheelMount-bottom {
+  width: 350px;
+  height: 25px;
+  position: relative;
+  top: 5px;
+  left: 85px;
+  background-color: var(--darkGrey);
+}
+
+.rover__wheels {
+  width: 480px;
+  position: relative;
+  top: -60px;
+  left: 26px;
+  bottom: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rover__wheel {
+  width: 130px;
+  height: 130px;
+  background-color: var(--black);
+  border-radius: 50%;
+}
